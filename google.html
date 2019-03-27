@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<button id="button" style="width:80px;height:30px;cursor:pointer;">
+  Click
+</button>
+<button id="button2" style="width:80px;height:30px;cursor:pointer;">
+  Click2
+</button>
+<div id="map" style="width:555px;height:500px"></div>
+<script>
+  function myMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: new google.maps.LatLng(-33.4545832, -70.6541925),
+      zoom: 11
+    });
+  }
+
+  function addmarker(lat, lon, info) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(lat, lon),
+      info: new google.maps.InfoWindow({
+        content: info
+      }),
+      map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      marker.info.open(map, marker);
+    });
+
+    map.panTo(marker.getPosition());
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL5dMHBCV7crlostybmkuGBAXjOP3yawQ&callback=myMap"></script>
+
+<script type="text/javascript" src="google.js"></script>
+
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
