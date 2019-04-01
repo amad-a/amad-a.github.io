@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> HW4 </title>
+	<link rel="stylesheet" type= "text/css" href="css/style.css"/>
+</head>
+
+<body>
+<div class="left-col">
+
+<form method="GET" action="http://localhost:3000/vfs">
+command
+<br>
+<select name="command">
+	<option value="ls">ls</option>
+	<option value="tree">tree</option>
+	<option value="cat">cat</option>
+</select>
+<br>
+
+Option 
+<br>
+
+<input type="text" name="option">
+<br>
+Path 
+<br>
+<input type="text" name="path">
+<br>
+<input type="submit">
+</form>
+
+</div>
+
+<div class="center-col">
+
+<form method="POST" action="http://localhost:3000/vfs">
+command
+<br>
+<select name="command">
+	<option value="mkdir">mkdir</option>
+	<option value="write">write</option>
+</select>
+<br>
+Path 
+<br>
+<input type="text" name="path">
+<br>
+Content 
+<br>
+<input type="text" name="content">
+<br>
+<input type="submit">
+</form>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+
+
+head {
+	background-color: #333300;
+
+	color: #FFF000;
+}
+
+body {
+	background-color: #333330;
+	background-image: "img/ubuntu.jpg";
+	color: #FFF000;
+}
+
+.left-col, .right-col, .center-col {
+        width: 30%;
+        float: left;
+      }
