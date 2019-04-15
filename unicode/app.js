@@ -6,7 +6,7 @@ const app = express();
 const path = require("path");
 //const hbs = require("hbs");
 app.set('view engine', 'hbs');
-let text;
+//let myName;
 
 
 
@@ -21,7 +21,7 @@ app.set('view engine', 'hbs');
 
 
 
-//const myName = 'myName';
+//const myName = '';
 
 
 
